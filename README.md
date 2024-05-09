@@ -3,7 +3,7 @@ The best part is no part!  Here's a very raw but very simple automower in a sing
 
 
 Mower Mechanical:
-  - Husqvarna 450x automower. Mechanically they are pretty reliable. The bump sensors, motors, seals, and batteries have been good. Electrically on a single mower we've had: 2x mainboards die($300 each), 1x power supply ($200) , and 1x charging board/loop sensor($? this was the last straw.) So dump the controls but keep the sensors, motors, shell, and cutting hardware.
+  - Husqvarna 450x automower. Mechanically they are pretty reliable. The bump sensors, motors, seals, and batteries have been good. Electrically on a single mower we've had: 2x mainboards die($300 each), 1x power supply ($200 each), and 1x charging board/loop sensor (IDK cost this was the last straw!) So dump the controls but keep the sensors, motors, shell, and cutting hardware.
   - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearbox. The grease dries out and gets dirt in it. Here's the part I've yet to see anywhere else: while you're in the gearbox, Look at the drive motors. Mine were packed full of dirt and dried grease - they did not spin very freely. I carefully pulled my motors apart (requires angle grinding the steel crimped tabs on back of motor / cracking entire shell) and washed all the old gunk out then re-assembled but I bet a solvent soak then maybe an oil bath to ensure motor bearings have at least some lubrication and rust protection could free up a stuck bldc motor.)
   - You could probably hook up the DC motor on cut height to the BBBlue if you actually care. I set it as high as possible so we don't get stuck. I haven't touched it ever since. One more thing to fail.
 
