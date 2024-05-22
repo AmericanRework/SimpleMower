@@ -3,7 +3,7 @@ The best part is no part!  Here's a very raw but very simple automower in a sing
 
 Mower Mechanical:
   - Husqvarna 450x automower. Mechanically they are pretty reliable. Dump the circuit boards and proprietary garbage but keep the sensors, motors, shell, and cutting hardware.
-  - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearbox.
+  - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearboxes. See assembly instuctions for details.
   - Pretty sure most of this will work on a 430.
 Mower Electrical: 
   - Battery: use the two husqvarna batteries from your 450 automower. They include a 5s balance charger under the blue wrapper.
