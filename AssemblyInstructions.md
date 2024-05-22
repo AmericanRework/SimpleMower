@@ -12,7 +12,7 @@ Suggested build/configuration order:
 
   3.5 May also want to buy RTK stuff now, I chose to buy it later once I had a working mower base. 
 
-4. Move or buy a router so that your entire backyard has decent wifi coverage. We are literally sending like a few characters back and forth - don't need high bandwidth, but do need wifi over anywhere you want to drive your robot.
+4. Move or buy a router so that your entire backyard has decent wifi coverage. We are literally sending like a few characters back and forth - don't need high bandwidth, but do need wifi over anywhere you want to control your robot.
 
 5. RTK stuff: You can make it work remote control with just the stuff above. If you are close to an existing rtk base station(https://rtk2go.com/) you may only need one rtk setup. I decided to run my own rtk base station so I needed 2x of these: https://www.sparkfun.com/products/18292. I ran the base station from a beaglebone black but a rasberry pi or pretty much anything that is running linux and is on all the time and is near your antenna location should work. Obviously if you use your own base station that will also need a static IP adress from your router.
 
