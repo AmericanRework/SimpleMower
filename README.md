@@ -1,5 +1,5 @@
 # SimpleMower
-The best part is no part!  Here's a very raw but very simple automower in a single (1000 lines or less!) python file. (And some libraries/supporting threads, but the logic is all in one place, no hunting through 5 GB of code for one setting to change!) No husqvarna-dealer-only tools. No ROS. No app. Minimal complexity. No IDE - browser is all you need. This code has about 100 hours of mowing so far. I hope this helps keep automowers mowing instead of going to a landfill.
+The best part is no part!  Here's a very raw but very simple automower in a single (1000 lines or less!) python file. (And some libraries/supporting threads, but the logic is all in one place, no hunting through 5 GB of code for one setting to change!) No husqvarna-dealer-only tools. No ROS. No app. Minimal complexity. No IDE - browser is all you need. This code has about 200 hours of mowing so far. I hope this helps keep automowers mowing instead of going to a landfill.
 
 
 Mower Mechanical:
