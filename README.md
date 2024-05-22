@@ -6,7 +6,7 @@ The best part is no part!  Here's a very raw but very simple automower in a sing
   - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearboxes. See assembly instuctions for details.
   - Pretty sure most of this will work on a 430.
 
-**Mower Electrical: **
+**Mower Electrical**
   - Battery: use the two husqvarna batteries from your 450 automower. They include a 5s balance charger under the blue wrapper.
   - Use a DC current limited power supply for charging. I cap charger at 4 Amps - about 2A/battery, but still under the 5A / battery limit if one of the two batteries failed.
   - Brains + sensors + low power: Beaglebone Blue. Takes 12v and makes 5v and 3.3v for the RP2040 picos on the servo amps, as well as sensor power. Breadboard to break out the BBBlue digital inputs, and pull them up or down/ provide power to the hall-effect bump and lifted sensors.
