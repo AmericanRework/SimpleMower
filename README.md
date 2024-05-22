@@ -29,10 +29,13 @@ The best part is no part!  Here's a very raw but very simple automower in a sing
   - Mows rectangles that are aligned with gps latitude and longitude. I have 4 obstacle free rectangular zones that comprise about 70% of the yard. Yes you still have to get out a manual mower for the edges. You're not going to like whatever algorithm I come up with for mowing your lawn so write that part yourself - it's the fun part! (though if you wait long enough I'll post my solution)
   - Robot doesn't yet know how to find a charger, follow a vector, mow a pattern, mow non-rectangular shapes, have exclusion areas, back up after bonking into something, slow down near an edge/etc... Working on it, will update once I'm happy with it.
 
+**Thank you!:**
+  - SEMU Consulting https://github.com/semuconsulting
 
 **Random notes:**
   - Our mower is named Toby. All references to 'toby' could presumably be changed to 'robot' but people take better care of robots if they name them!
   - This is very rough. Could easily tighten things up and delete all the prints and comments and put everything in a few function calls but that makes it harder for you to change. Give me a thousand lines in a couple files any day over hundreds of files all with five lines in them. 
+
 
 **To fix:**
   - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f currently fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.)
