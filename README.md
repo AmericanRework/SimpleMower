@@ -47,3 +47,4 @@ The best part is no part: Start with an older automower, then throw out all the 
   - Add in follow vector/mow non-rectangluar area/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge.
   - If you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in forwards for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems. 
   - Write some better 'how to drive' instructions.
+  - smart phones don't generate keypress events. Right now you have to use a pc for remote control. Would be nice to have some way to get a phone interface even if it's just some buttons for start/reset/etc...
