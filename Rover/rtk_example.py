@@ -1,7 +1,7 @@
 """
 pygnssutils - rtk_example.py
 
-*** FOR ILLUSTRATION ONLY - NOT FOR PRODUCTION USE *** check out semuconsulting.com there was lots of text here. Follow their license.
+*** FOR ILLUSTRATION ONLY - NOT FOR PRODUCTION USE *** check out semuconsulting.com there was lots of text here that was hard to understand. Follow their license.
 
 modified to dump current position, accuracy and time of fix to /dev/shm/coords.txt
 This is setup for an RTK base station at 10.10.0.9 or swap the commented lines and you can use rtk2go.com
