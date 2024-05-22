@@ -30,7 +30,10 @@ The best part is no part: Start with an older automower, then throw out all the 
   - Robot doesn't yet know how to find a charger, follow a vector, mow a pattern, mow non-rectangular shapes, have exclusion areas, back up after bonking into something, slow down near an edge/etc... Working on it, will update once I'm happy with it.
 
 **Thank you!:**
-  - SEMU Consulting https://github.com/semuconsulting
+  - SEMU Consulting: https://github.com/semuconsulting
+  - Ublox: https://www.u-blox.com/en/product/zed-f9p-module
+  - Sparkfun: https://www.sparkfun.com/products/15136
+  - Beaglebone: https://www.beagleboard.org/boards/beaglebone-blue
 
 **Random notes:**
   - Our mower is named Toby. All references to 'toby' could presumably be changed to 'robot' but people take better care of robots if they name them!
