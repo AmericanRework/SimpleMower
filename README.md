@@ -34,9 +34,9 @@ Random notes:
   - This is very rough. Could easily tighten things up and delete all the prints and comments and put everything in a few function calls but that makes it harder for you to change. Give me a thousand lines in a couple files any day over hundreds of files all with five lines in them. 
 
 To fix:
-  - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f currently fault. (why are you mowing when it's that cold? -eh frosty mornings are cold)
-  - Dump ALL power and shutdown when battery gets low. right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger.
-  - put some pictures and electrical prints up here.
-  - Add in follow vector/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge.
-  - if you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in forwards for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems. 
-  - write some better 'how to drive' instructions
+  - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f currently fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.)
+  - Dump ALL power and shutdown when battery gets low. Right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger.
+  - Put some pictures and electrical prints up here.
+  - Add in follow vector/mow non-rectangluar area/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge.
+  - If you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in forwards for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems. 
+  - Write some better 'how to drive' instructions.
