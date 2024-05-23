@@ -26,7 +26,7 @@ Suggested build/configuration order:
 
 9. At this point you can load up the code here and mow remotely with your automower, but no GPS. 
 
-   For a beaglebone with cloud9: just copy the files in the rover directory here to your beaglebone. Install couple libraries, again, see the top of any code file for any relevant install instructions. Start TobyAuto, TobyWebserver (comment out the gps lines if you are not using gps) and you have a remote rover. Setup a base station then run RTK_Example to get rtk coords written to a file. 
+   For a beaglebone with cloud9: just copy the files in the rover directory here to your beaglebone. Install couple libraries, again, see the top of any code file for any relevant install instructions. Start TobyAuto, TobyWebserver (comment out the gps lines if you are not using gps) and you have a remote rover. Setup a base station then run RTK_Example to get rtk gps coords written to a file and enable auto mode.
 
    How to drive: wsda. q and e are gradual turns. 'M' starts the mower. m stops the mower. 12345 are speed, and any other key stops everything immediately. g is auto mode and won't work if you don't have gps.
 
