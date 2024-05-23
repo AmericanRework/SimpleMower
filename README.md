@@ -3,7 +3,7 @@ The best part is no part: Start with an older automower, then throw out all the 
 
 **Mower Mechanical:**
   - Husqvarna 450x automower. Mechanically they are pretty reliable. Dump the circuit boards and proprietary garbage but keep the sensors, motors, shell, and cutting hardware.
-  - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearboxes and possibly clean the motors too. See assembly instuctions for details.
+  - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearboxes and check drive motor internals too. See assembly instuctions for details.
   - Pretty sure most of this will work on a 430.
 
 **Mower Electrical:**
