@@ -18,6 +18,8 @@ Suggested build/configuration order:
 
 6. Load your BBBlue image (link!?) then get the BBBlue on whatever your backyard wifi will be with a static address. Log in, do some updates, make sure your image is good and stuff is working. Decide how much you trust randos on the internet and your own build skills (you shouldn't) so plug in the servo amp(s) to the BBBlue for some bench testing. Confirm BBBlue can control motors through whatever servo amp you chose.
 
+Most of the code has setup or install instructions in the top few lines.
+
 7. BBBlue IO breakout board. Connect at least the bump sensors and estop button to an io breakout board for the BBBlue. I'd also suggest the battery level sensor right now as well 'cause you're right there and it gets harder to do after everything is in the robot. Test all the pins and sensors.
 
 8. Make a 21v wiring harness and get a DC-DC converter to make 12v. I used molex plugs that match the automower battery plugs to make it easy to disconnect stuff. Fuses on each battery line is a good idea. Make sure your batteries are at the same voltage when you plug them both in. You could make a whole battery integration board and include low battery voltage shutoff but simple is a good starting place. So we've got simple. My 'harness' had: 6x 21v connections: 1. (fused) Battery 1. 2. (fused) Battery 2. 3. DC-DC 21 down to 12v. 4. Charger input. 5. servo amp: drive motors. 6. servo amp: cut motors.
