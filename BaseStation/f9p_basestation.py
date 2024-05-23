@@ -1,7 +1,7 @@
 """
 f9p_basestation.py
 
-survey in your base station antenna location to best possible accuracy. Fill in the lat/lon/height below. 
+survey your base station antenna location to best possible accuracy. Fill in the lat/lon/height below. 
 run this python script, then run the command line down at the bottom of this comment. 
 
 install: (I might have missed something here:)
