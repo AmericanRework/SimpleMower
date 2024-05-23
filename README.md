@@ -18,7 +18,7 @@ The best part is no part: Start with an older automower, then throw out all the 
 **Mower Sensors:**
   - RTK GPS: SEMU consulting are my hero. (https://github.com/semuconsulting) We use two of their libraries, but you might also use their open source linux GUI for just testing out the ZED-F9P hardware at first.
   - Bump, lifted, and estop are all from the automower. They are hall effect sensors. I'll try to post their pinouts as well. Steal the plugs from your automower mainboard using a heat gun. Hot glue backside of the connector. 
-  - Temp, magnetometer, (accelermoeter) and battery level are done by BBBlue. Battery level is a resistor voltage divider to the BBBlue ADC.
+  - Temp, magnetometer, (accelerometer present but not used) and battery level are done by BBBlue. Battery level is a resistor voltage divider to the BBBlue ADC.
 
 **RTK Base station:**
   - Beaglebone Black + Sparkfun RTK GPS kit + SEMU Consulting again.
