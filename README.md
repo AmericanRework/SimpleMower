@@ -35,7 +35,7 @@ The best part is no part: Start with an older automower, then throw out all the 
   - Ublox: https://www.u-blox.com/en/product/zed-f9p-module
   - Sparkfun: https://www.sparkfun.com/products/15136
   - Beaglebone: https://www.beagleboard.org/boards/beaglebone-blue
-  - RTK2go: https://rtk2go.com/
+  - RTK2go: http://rtk2go.com/
 
 **Random notes:**
   - Our mower is named Toby. All references to 'toby' could presumably be changed to 'robot' but people take better care of robots if they name them!
