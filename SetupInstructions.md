@@ -1,6 +1,7 @@
 
 
 Assembly instuction + Suggested build/configuration order:
+
 0. Take a look at all the documentation, decide if you really want to do this. ElectricalDoc.jpg has pinouts of various stuff that should be helpful.
 
 1. Tear down your automower. Check the batteries, motors, gearboxes, etc... Make sure both batteries hold a charge (should be between 18 and 21v but might dip below if it's been off for a long time) 
