@@ -48,7 +48,7 @@ The best part is no part: Start with an older automower, then throw out all the 
 **To fix:**
   - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f currently fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.)
   - Dump ALL power and shutdown when battery gets low. Right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger.
-  - Put some pictures and electrical prints up here.
+  - Draw a diagram of how the three threads that run the mower interact.
   - Add in follow vector/mow non-rectangluar area/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge.
   - If you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in whatever direction it was going for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wrong-direction wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems.
   - Current feedback from drive motor servo amp isn't quite right. Suspect code issue in servo amp. works well enough to shut down but we should calibrate it to return at least roughly the # of amps not ~50x # of amps. heh.
