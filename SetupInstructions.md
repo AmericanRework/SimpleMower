@@ -1,6 +1,8 @@
 
 
 Assembly instuction + Suggested build/configuration order:
+0. Take a look at all the documentation, decide if you really want to do this. ElectricalDoc.jpg has pinouts of various stuff that should be helpful.
+
 1. Tear down your automower. Check the batteries, motors, gearboxes, etc... Make sure both batteries hold a charge (should be between 18 and 21v but might dip below if it's been off for a long time) 
 
    Automower motor/gearbox PM: The grease dries out and gets dirt in them. Plenty of videos on the web of how to clean out a and re-grease a gearbox. Here's the part I've yet to see anywhere else: while you're in the gearbox, take a very careful look at the drive motors. Mine were packed full of dirt and dried grease - they did not spin very freely. This may have actually been the reason their servo amp board kept dying. But it's not like I have any way to check that with their closed dealer-only-ecosystem! I (carefully!) pulled my motors apart (requires angle grinding the steel crimped tabs on back of motor / cracking entire shell of motor so you can unplug them from the servo amp) and washed all the old gunk out then re-assembled. I bet a solvent soak then maybe an oil bath to ensure motor bearings have at least some lubrication and rust protection could free up a stuck drive motor without cutting the motor apart.
