@@ -1,5 +1,5 @@
 # SimpleMower
-The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about 200 hours of mowing so far. I hope this helps level up your mower or robot! 
+The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about 300 hours of mowing so far. I hope this helps level up your mower or robot! 
 
 ![plot](./Toby.jpg)
 
@@ -15,8 +15,9 @@ The best part is no part: Start with an older automower, then throw out all the 
   - Brains + sensors + low power: You could use anything that has: headless linux, wifi, 1x usb port(gps), 2x serial ports for servo amps (or 2x more usb ports), some sort of magnetometer, adc, and at least 5x digital inputs you can read with python, and some way to make 3.3v for hall sensors and servo amp rp2040's. BeagleBone Blue includes ALL of this on a single board that has cloud9 ide (easy browser ide no more ssh or clunky uploading - edit the code right on the mower then run it!) and has been reliable so far. The beaglebone takes 12v and makes 5v and 3.3v for the RP2040 picos on the servo amps, as well as sensor power. Soldered breadboard to break out the BBBlue digital inputs, and pull them up or down/ provide power to the hall-effect bump and lifted sensors.
   - Servo amp: Made our own: https://github.com/AmericanRework/Pico-2x-BLDC. Probably can use most simplefoc commander serial interface servo amps with minor modifications to code. Larger modifications to code and or electrical required for other serial or i2c/spi/etc controlled servo amps. We use a simple heartbeat: if the servo amp doesn't hear anything from the beaglebone for 5 sec it shuts off.
   - Sparkfun RTK GPS to BBBlue usb port. (https://www.sparkfun.com/products/18292) 
-  - I'll try to post prints and pinouts of all this. 
+  - See ElectricalDoc.jpg for pinouts of the automower battery and sensors. 
 
+![plot](./Installed450x.jpg)
 
 **Mower Sensors:**
   - RTK GPS: SEMU consulting are my hero. (https://github.com/semuconsulting) We use two of their libraries, but you might also use their open source linux GUI for just testing out the ZED-F9P hardware at first.
