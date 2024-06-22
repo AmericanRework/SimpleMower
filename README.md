@@ -1,6 +1,8 @@
 # SimpleMower
 The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about 200 hours of mowing so far. I hope this helps level up your mower or robot! 
 
+![plot](./Toby.jpg)
+
 **Mower Mechanical:**
   - Husqvarna 450x automower. Mechanically they are pretty reliable. Dump the circuit boards and proprietary garbage but keep the sensors, motors, shell, and cutting hardware.
   - Automower drive motor PM: Now is a good time to regrease your 450 drive motor gearboxes and check drive motor internals too. See assembly instuctions for details.
