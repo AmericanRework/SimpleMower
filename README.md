@@ -13,7 +13,7 @@ The best part is no part: Start with an older automower, then throw out all the 
   - Battery: use the two husqvarna batteries from your 450 automower. They include a 5s balance charger under the blue wrapper.
   - Use a DC current limited power supply for charging. I cap charger at 4 Amps - about 2A/battery, but still under the 5A / battery limit if one of the two batteries failed.
   - Brains + sensors + low power: You could use anything that has: headless linux, wifi, 1x usb port(gps), 2x serial ports for servo amps (or 2x more usb ports), some sort of magnetometer, adc, and at least 5x digital inputs you can read with python, and some way to make 3.3v for hall sensors and servo amp rp2040's. BeagleBone Blue includes ALL of this on a single board that has cloud9 ide (easy browser ide no more ssh or clunky uploading - edit the code right on the mower then run it!) and has been reliable so far. The beaglebone takes 12v and makes 5v and 3.3v for the RP2040 picos on the servo amps, as well as sensor power. Soldered breadboard to break out the BBBlue digital inputs, and pull them up or down/ provide power to the hall-effect bump and lifted sensors.
-  - Servo amp: Made our own: https://github.com/AmericanRework/Pico-2x-BLDC. Probably can use most simplefoc commander serial interface servo amps with minor modifications to code. Larger modifications to code and or electrical required for other serial or i2c/spi/etc controlled servo amps. We use a simple heartbeat: if the servo amp doesn't hear anything from the beaglebone for 5 sec it shuts off.
+  - Servo amp: Made our own: https://github.com/AmericanRework/Pico-2x-BLDC. Probably can use most simplefoc commander serial interface servo amps with minor modifications to code. Larger modifications to code and or electrical required for other serial or i2c/spi/etc controlled servo amps. If circuit board design is not your thing, Odrives are off the shelf and would certainly work but would need various code changes. We use a simple heartbeat: if the servo amp doesn't hear anything from the beaglebone for 5 sec it shuts off.
   - Sparkfun RTK GPS to BBBlue usb port. (https://www.sparkfun.com/products/18292) 
   - See ElectricalDoc.jpg for pinouts of the automower battery and sensors. 
 
@@ -21,7 +21,7 @@ The best part is no part: Start with an older automower, then throw out all the 
 
 **Mower Sensors:**
   - RTK GPS: SEMU consulting are my hero. (https://github.com/semuconsulting) We use two of their libraries, but you might also use their open source linux GUI for just testing out the ZED-F9P hardware at first.
-  - Bump, lifted, and estop are all from the automower. They are hall effect sensors. I'll try to post their pinouts as well. Steal the plugs from your automower mainboard using a heat gun. Hot glue backside of the connector. 
+  - Bump, lifted, and estop are all from the automower. They are hall effect sensors. See the red and white bump sensor pictures for board pinouts or the electrical doc for plug pinouts. Steal the plugs from your automower mainboard using a heat gun. Hot glue backside of the stolen connectors after you solder them up.
   - Temp, magnetometer, (accelerometer present but not used) and battery level are done by BBBlue. Battery level is a resistor voltage divider to the BBBlue ADC.
 
 **RTK Base station:**
