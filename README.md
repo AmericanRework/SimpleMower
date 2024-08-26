@@ -1,5 +1,5 @@
 # SimpleMower
-The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about 300 hours of mowing so far. I hope this helps level up your mower or robot! 
+The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about 400 hours of mowing so far. I hope this helps level up your mower or robot! 
 
 ![plot](./Toby.jpg)
 
@@ -47,8 +47,10 @@ The best part is no part: Start with an older automower, then throw out all the 
 
 **To fix:**
   - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f currently fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.)
+  - fault message on web interface is always 'mower is stuck' regardless of fault. Log file has faults, but when the mower stops moving 'cause it's faulted it decides it's also stuck. Fix.
   - Dump ALL power and shutdown when battery gets low. Right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger.
   - Draw a diagram of how the three threads that run the mower interact.
+  - Make the lights work. Really hard to drive at night without lights. BBB has drivers that should be able to run the LED lights of an automower.
   - Add in follow vector/mow non-rectangluar area/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge.
   - If you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in whatever direction it was going for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wrong-direction wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems.
   - Current feedback from drive motor servo amp isn't quite right. Suspect code issue in servo amp. works well enough to shut down but we should calibrate it to return at least roughly the # of amps not ~50x # of amps. heh.
