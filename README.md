@@ -39,7 +39,8 @@ The best part is no part: Start with an older automower, then throw out all the 
   - Sparkfun: https://www.sparkfun.com/products/15136
   - Beaglebone: https://www.beagleboard.org/boards/beaglebone-blue
   - RTK2go: http://rtk2go.com/
-
+  - Big thank you to https://github.com/ClemensElflein/ for creating the Open Mower project and showing what RTK GPS can do. His project inspired me to take the leap and make this mower!
+   
 **Random notes:**
   - Our mower is named Toby. All references to 'toby' could presumably be changed to 'robot' but people take better care of robots if they name them!
   - This is very rough. Could easily tighten things up and delete all the prints and comments and put everything in a few function calls but that makes it harder for you to change. Give me a thousand lines in a couple files any day over hundreds of files all with five lines in them. 
