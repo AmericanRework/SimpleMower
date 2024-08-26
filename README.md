@@ -48,7 +48,7 @@ The best part is no part: Start with an older automower, then throw out all the 
 
 **To fix:**
   - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f cause a fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.) At any rate, there's a high temp check above ~95f ambient to shut down mower - when it's 95 out in the sun I've seen the mower passing 120f. Too hot for 18650's to charge.
-  - fault message on web interface is almost always 'mower is stuck' regardless of fault. Log file has correct faults, but when the mower stops moving 'cause it's faulted it decides it's also stuck, which generates a new error message. Fix.
+  - Fault message on web interface is almost always 'mower is stuck' regardless of fault. Log file has correct faults, but when the mower stops moving 'cause it's faulted it decides it's also stuck, which generates a new error message.
   - Dump ALL power and shutdown when battery gets low. Right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger.
   - Draw a diagram of how the three threads that run the mower interact.
   - Make the lights work. Really hard to drive at night without lights. BBB has drivers that should be able to run the LED lights of an automower.
