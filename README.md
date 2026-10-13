@@ -1,5 +1,5 @@
 # SimpleMower
-The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about 400 hours of mowing so far. I hope this helps level up your mower or robot! 
+The best part is no part: Start with an older automower, then throw out all the original boards, software, and boundary wire. Keep the sensors, motors, and body. Add RTK GPS. Replace closed-source & under-functional software with a simple and easy to follow control loop in a single (1000 lines or less!) python file. No husqvarna-dealer-only tools. No ROS. No app. No boundary wire. Minimal complexity. Run it on anything that runs linux, python, and javascript. Interface from any computer browser. SimpleMower(ours is named Toby) has about ~~400~~1000+ hours (3 years!) of mowing so far. I hope this helps level up your mower or robot! 
 
 ![plot](./Toby.jpg)
 
@@ -43,17 +43,21 @@ The best part is no part: Start with an older automower, then throw out all the 
    
 **Random notes:**
   - Our mower is named Toby. All references to 'toby' could presumably be changed to 'robot' but people take better care of robots if they name them!
-  - This is very rough. Could easily tighten things up and delete all the prints and comments and put everything in a few function calls but that makes it harder for you to change. Give me a thousand lines in a couple files any day over hundreds of files all with five lines in them. 
+  - This is very rough. Could easily tighten things up and delete all the prints and comments and put everything in a few function calls but that makes it harder for you to change. Give me a thousand lines in a couple files any day over hundreds of files all with five lines in them.
+  - 2026: this thing just keeps going. The front (non-drive) wheels of the robot wore out this year they have so many miles on them! BBblue's EEprom instead of flash is rock solid - zero re-images or flash issues, hopefully stays that way! Thanks for checking this out!
 
+**2026 fall: Fixed but not uploaded yet or non-issues:**
+  - (this isn't a big enough problem to bother solving it. change temp thresholds if you're getting nusiance faults) Temperature and battery voltage. High temps will run battery down too far, low temps below 30f cause a fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.) At any rate, there's a high temp check above ~95f ambient to shut down mower - when it's 95 out in the sun I've seen the mower passing 120f. Too hot for 18650's to charge.
+  - Fault message on web interface is almost always 'mower is stuck' regardless of fault. Log file has correct faults, but when the mower stops moving 'cause it's faulted it decides it's also stuck, which generates a new error message. 2026: This is solved in the version I've been running.
+  - Dump ALL power and shutdown when battery gets low. Right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger. 2026 fall update: 5s balance chargers cut you off. NBD. batteries fine. no fix required.
+  - Make the lights work. Really hard to drive at night without lights. BBB has drivers that should be able to run the LED lights of an automower. 2026: yep. wired in, BBlue drivers work fine to drive stock 450x LED lights, no idea if I put a resistor inline.
+  - Smart phones don't generate keypress events. Right now you have to use a pc for remote control. Would be nice to have some way to get a phone-browser interface even if it's just some buttons for start/reset/etc... 2026: pair a bluetooth keyboard to your smartphone and you generate keypress events all day. Non issue. Still a good web interface would be nice but then it won't be simple anymore. Zero planned iterations on this for now. 
+  - If you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in whatever direction it was going for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wrong-direction wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems. 2026: I think I updated the servo amps with just a new simplefoc version and this went away. I think? Maybe confirm its fixed but I'm either used to it or it hasn't happened for a while now.
+  - Write some better 'how to drive' instructions. (can probably ask AI how to drive it and it'll probably tell you. not going to bother with this one.)
+  - I'll upload all these fixes and more eventually, probably when the last hit list items below are done.
 
-**To fix:**
-  - Temperature and battery voltage. High temps will run battery down too far, low temps below 30f cause a fault. (why are you mowing when it's that cold? -eh frosty mornings are cold.) At any rate, there's a high temp check above ~95f ambient to shut down mower - when it's 95 out in the sun I've seen the mower passing 120f. Too hot for 18650's to charge.
-  - Fault message on web interface is almost always 'mower is stuck' regardless of fault. Log file has correct faults, but when the mower stops moving 'cause it's faulted it decides it's also stuck, which generates a new error message.
-  - Dump ALL power and shutdown when battery gets low. Right now, it stops mowing but still keeps the bbblue and dc-dc on, which pulls 0.2A which will eventually wreck your battery if you don't leave it on a charger.
+**2026 fall update: To fix:**
+  - Current feedback from drive motor servo amp isn't right. Definite code issue in servo amp. Trailing average method works well enough to catch stall conditions and shut down but we should calibrate it to return at least roughly the # of amps not ~50x # of amps. heh. 2026: the issue is that we're not reading current exactly when the FETs are on. This is a major issue we're going to fix.
   - Draw a diagram of how the three threads that run the mower interact.
-  - Make the lights work. Really hard to drive at night without lights. BBB has drivers that should be able to run the LED lights of an automower.
-  - Add in follow vector/mow non-rectangluar area/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge.
-  - If you disable the servo amps - hit estop/bumper/spacebar - then tell robot to drive in opposite direction, it'll resume travel in whatever direction it was going for a fraction of a second until the servo amp ramps up/down to the new desired velocity. Usually a tad bit of wrong-direction wheelspin is the symptom. This is a servo amp bug and we'll dig into it eventually but probably after other problems.
-  - Current feedback from drive motor servo amp isn't quite right. Suspect code issue in servo amp. works well enough to shut down but we should calibrate it to return at least roughly the # of amps not ~50x # of amps. heh.
-  - Write some better 'how to drive' instructions.
-  - Smart phones don't generate keypress events. Right now you have to use a pc for remote control. Would be nice to have some way to get a phone-browser interface even if it's just some buttons for start/reset/etc...
+  - Add in follow vector/mow non-rectangular area/find charger/mow pattern/exclusion areas/backup after bump/slow down near edge. 2026 fall: still coming if I ever get time.
+
